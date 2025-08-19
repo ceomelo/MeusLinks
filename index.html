@@ -11,49 +11,69 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(145deg, #f8fafc 0%, #e2e8f0 100%);
             min-height: 100vh;
+            background-attachment: fixed;
         }
         .profile-img {
-            border: 4px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            border: 4px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: white;
+            padding: 3px;
         }
         .profile-img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transform: scale(1.08);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
         }
         .link-card {
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
             position: relative;
             overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(2px);
         }
-        .link-card::before {
+        .link-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+        .link-card::after {
             content: '';
             position: absolute;
             top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            transition: all 0.6s ease;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 60%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
-        .link-card:hover::before {
-            left: 100%;
+        .link-card:hover::after {
+            opacity: 1;
         }
         .icon-container {
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
         .link-card:hover .icon-container {
-            transform: scale(1.1);
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+        .fa-chevron-right {
+            transition: all 0.3s ease;
+        }
+        .link-card:hover .fa-chevron-right {
+            transform: translateX(3px);
+            color: #64748b;
         }
     </style>
 </head>
-<body class="py-12 px-4 md:py-16">
+<body class="py-12 px-4 md:py-20">
     <div class="max-w-md mx-auto">
         <!-- Profile Section -->
         <div class="text-center mb-12">
-            <div class="w-28 h-28 mx-auto mb-6 overflow-hidden rounded-full shadow-xl profile-img">
+            <div class="w-32 h-32 mx-auto mb-6 overflow-hidden rounded-full shadow-2xl profile-img">
                 <img src="logo.png" alt="Profile" class="w-full h-full object-cover">
             </div>
             <h1 class="text-3xl font-bold text-gray-800 mb-2">CEO | Alexandre Melo 👑</h1>
@@ -66,10 +86,10 @@
         </div>
 
         <!-- Links Section -->
-        <div class="space-y-5">
+        <div class="space-y-6">
             <!-- WhatsApp Link -->
             <a href="https://wa.me/5511943902900" target="_blank" class="block">
-                <div class="link-card bg-white rounded-xl p-5 shadow-md flex items-center hover:shadow-lg">
+                <div class="link-card bg-white/90 rounded-xl p-5 shadow-lg flex items-center hover:shadow-xl">
                     <div class="icon-container w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mr-4">
                         <i class="fab fa-whatsapp text-green-500 text-2xl"></i>
                     </div>
