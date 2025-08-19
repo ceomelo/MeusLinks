@@ -1,1 +1,170 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Alexandre Melo 👑 | Meus Links</title><script src="https://cdn.tailwindcss.com"></script><link rel="icon" type="image/png" href="logo.png"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');body{font-family:'Poppins',sans-serif;background:linear-gradient(135deg,#f5f7fa 0%,#c3cfe2 100%);min-height:100vh}.a{transition:all .3s ease}.a:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(0,0,0,.1)}</style></head><body class="py-8 px-4"><div class="max-w-md mx-auto"><div class="text-center mb-8"><div class="w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full border-4 border-white shadow-lg"><img src="logo.png" alt="Profile" class="w-full h-full object-cover"></div><h1 class="text-2xl font-bold text-gray-800">CEO | Alexandre Melo 👑</h1><p class="text-gray-600">Quer uma página de links como essa, ou personalizada especialmente para você? Clique no botão de WhatsApp e fale diretamente comigo!</p></div><div class="space-y-4"><a href="https://wa.me/5511943902900" target="_blank" class="block"><div class="a bg-white rounded-xl p-4 shadow-md flex items-center"><div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mr-4"><i class="fab fa-whatsapp text-green-500 text-xl"></i></div><div><h3 class="font-medium text-gray-800">WhatsApp</h3><p class="text-xs text-gray-500">Fale diretamente comigo!</p></div></div></a><a href="https://www.youtube.com/@alexandremeloo" target="_blank" class="block"><div class="a bg-white rounded-xl p-4 shadow-md flex items-center"><div class="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center mr-4"><i class="fab fa-youtube text-red-500 text-xl"></i></div><div><h3 class="font-medium text-gray-800">YouTube</h3><p class="text-xs text-gray-500">Canal sobre Desenvolvimento Pessoal & Finanças.</p></div></div></a><a href="https://www.instagram.com/ceomelo_/" target="_blank" class="block"><div class="a bg-white rounded-xl p-4 shadow-md flex items-center"><div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mr-4"><i class="fab fa-instagram text-blue-500 text-xl"></i></div><div><h3 class="font-medium text-gray-800">Instagram</h3><p class="text-xs text-gray-500">Me acompanhe no Instagram!</p></div></div></a><a href="https://www.tiktok.com/@alexandre_melo_?lang=pt-BR" target="_blank" class="block"><div class="a bg-white rounded-xl p-4 shadow-md flex items-center"><div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mr-4"><i class="fab fa-tiktok text-blue-700 text-xl"></i></div><div><h3 class="font-medium text-gray-800">TikTok</h3><p class="text-xs text-gray-500">Me acompanhe no TikTok!</p></div></div></a><a href="https://ceomelo.github.io/DroplexStudios/" target="_blank" class="block"><div class="a bg-white rounded-xl p-4 shadow-md flex items-center"><div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center mr-4"><i class="fas fa-globe text-purple-500 text-xl"></i></div><div><h3 class="font-medium text-gray-800">Droplex Studios | Ag. Marketing Digital</h3><p class="text-xs text-gray-500">A que realmente entrega resultados.</p></div></div></a><div class="mt-8 text-center text-gray-500 text-sm"><p>© 2025 | <strong>Alexandre Melo 👑</strong> | Todos os direitos reservados.</p></div></div><script>!function(){var e=document.querySelectorAll(".a");e.forEach(function(t){t.addEventListener("mouseenter",function(){this.style.transform="translateY(-3px)",this.style.boxShadow="0 10px 20px rgba(0,0,0,.1)"}),t.addEventListener("mouseleave",function(){this.style.transform="",this.style.boxShadow=""})})}();</script></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandre Melo 👑 | Meus Links</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        .profile-img {
+            border: 4px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        .link-card {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: all 0.6s ease;
+        }
+        .link-card:hover::before {
+            left: 100%;
+        }
+        .icon-container {
+            transition: all 0.3s ease;
+        }
+        .link-card:hover .icon-container {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="py-12 px-4 md:py-16">
+    <div class="max-w-md mx-auto">
+        <!-- Profile Section -->
+        <div class="text-center mb-12">
+            <div class="w-28 h-28 mx-auto mb-6 overflow-hidden rounded-full shadow-xl profile-img">
+                <img src="logo.png" alt="Profile" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">CEO | Alexandre Melo 👑</h1>
+            <p class="text-gray-600 mb-4 px-4">
+                Quer uma página de links como essa, ou personalizada especialmente para você?
+            </p>
+            <p class="text-sm text-gray-500 italic">
+                Clique no botão de WhatsApp e fale diretamente comigo!
+            </p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="space-y-5">
+            <!-- WhatsApp Link -->
+            <a href="https://wa.me/5511943902900" target="_blank" class="block">
+                <div class="link-card bg-white rounded-xl p-5 shadow-md flex items-center hover:shadow-lg">
+                    <div class="icon-container w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mr-4">
+                        <i class="fab fa-whatsapp text-green-500 text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-gray-800">WhatsApp</h3>
+                        <p class="text-xs text-gray-500 mt-1">Fale diretamente comigo!</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-300 ml-2"></i>
+                </div>
+            </a>
+
+            <!-- YouTube Link -->
+            <a href="https://www.youtube.com/@alexandremeloo" target="_blank" class="block">
+                <div class="link-card bg-white rounded-xl p-5 shadow-md flex items-center hover:shadow-lg">
+                    <div class="icon-container w-12 h-12 rounded-lg bg-red-50 flex items-center justify-center mr-4">
+                        <i class="fab fa-youtube text-red-500 text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-gray-800">YouTube</h3>
+                        <p class="text-xs text-gray-500 mt-1">Canal sobre Desenvolvimento Pessoal & Finanças</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-300 ml-2"></i>
+                </div>
+            </a>
+
+            <!-- Instagram Link -->
+            <a href="https://www.instagram.com/ceomelo_/" target="_blank" class="block">
+                <div class="link-card bg-white rounded-xl p-5 shadow-md flex items-center hover:shadow-lg">
+                    <div class="icon-container w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mr-4">
+                        <i class="fab fa-instagram text-gradient-to-r from-purple-500 to-pink-500 text-2xl" style="background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-gray-800">Instagram</h3>
+                        <p class="text-xs text-gray-500 mt-1">Me acompanhe no Instagram!</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-300 ml-2"></i>
+                </div>
+            </a>
+
+            <!-- TikTok Link -->
+            <a href="https://www.tiktok.com/@alexandre_melo_?lang=pt-BR" target="_blank" class="block">
+                <div class="link-card bg-white rounded-xl p-5 shadow-md flex items-center hover:shadow-lg">
+                    <div class="icon-container w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mr-4">
+                        <i class="fab fa-tiktok text-gray-900 text-2xl" style="text-shadow: 1px 0px 0px #25F4EE, -1px 0px 0px #FE2C55;"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-gray-800">TikTok</h3>
+                        <p class="text-xs text-gray-500 mt-1">Me acompanhe no TikTok!</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-300 ml-2"></i>
+                </div>
+            </a>
+
+            <!-- Website Link -->
+            <a href="https://ceomelo.github.io/DroplexStudios/" target="_blank" class="block">
+                <div class="link-card bg-white rounded-xl p-5 shadow-md flex items-center hover:shadow-lg">
+                    <div class="icon-container w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center mr-4">
+                        <i class="fas fa-globe text-purple-500 text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-gray-800">Droplex Studios</h3>
+                        <p class="text-xs text-gray-500 mt-1">Agência de Marketing Digital que entrega resultados</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-300 ml-2"></i>
+                </div>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-12 text-center text-gray-500 text-sm">
+            <p>© 2025 | <strong class="text-gray-700">Alexandre Melo  👑</strong> | Todos os direitos reservados.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add ripple effect to links
+            const links = document.querySelectorAll('.link-card');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Create ripple element
+                    const ripple = document.createElement('span');
+                    ripple.classList.add('ripple');
+                    ripple.style.width = ripple.style.height = Math.max(this.offsetWidth, this.offsetHeight) + 'px';
+                    ripple.style.left = (e.pageX - this.getBoundingClientRect().left - this.offsetWidth / 2) + 'px';
+                    ripple.style.top = (e.pageY - this.getBoundingClientRect().top - this.offsetHeight / 2) + 'px';
+                    this.appendChild(ripple);
+                    
+                    // Remove ripple after animation
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
