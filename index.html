@@ -1,92 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alexandre Melo 👑 | Meus Links</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(145deg, #f8fafc 0%, #e2e8f0 100%);
-            min-height: 100vh;
-            background-attachment: fixed;
-        }
-        .profile-img {
-            border: 4px solid rgba(255, 255, 255, 0.9);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            background: white;
-            padding: 3px;
-        }
-        .profile-img:hover {
-            transform: scale(1.08);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
-        }
-        .link-card {
-            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(2px);
-        }
-        .link-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-            border-color: rgba(255, 255, 255, 0.6);
-        }
-        .link-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 60%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .link-card:hover::after {
-            opacity: 1;
-        }
-        .icon-container {
-            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-        .link-card:hover .icon-container {
-            transform: scale(1.15) rotate(5deg);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-        }
-        .fa-chevron-right {
-            transition: all 0.3s ease;
-        }
-        .link-card:hover .fa-chevron-right {
-            transform: translateX(3px);
-            color: #64748b;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexandre Melo 👑 | Meus Links</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(145deg, #f8fafc 0%, #e2e8f0 100%);
+      min-height: 100vh;
+      background-attachment: fixed;
+    }
+
+    /* Logo estilizada */
+    .profile-img {
+      border: 6px solid rgba(255, 255, 255, 0.95);
+      border-radius: 50%;
+      padding: 4px;
+      background: white;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15),
+                  0 0 0 4px rgba(255, 255, 255, 0.5);
+      transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+      position: relative;
+      overflow: hidden;
+      width: 140px;
+      height: 140px;
+      margin: 0 auto;
+    }
+    .profile-img::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #6b5b95, #feb236, #d64161);
+      opacity: 0.15;
+      z-index: -1;
+    }
+    .profile-img img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .profile-img:hover {
+      transform: scale(1.12) rotate(-2deg);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25),
+                  0 0 15px rgba(255, 255, 255, 0.6);
+    }
+
+    /* Cards de links */
+    .link-card {
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(4px);
+    }
+    .link-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+    .link-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(255, 255, 255, 0) 60%
+      );
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .link-card:hover::after {
+      opacity: 1;
+    }
+
+    .icon-container {
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      min-width: 60px;
+      min-height: 60px;
+    }
+    .link-card:hover .icon-container {
+      transform: scale(1.15) rotate(5deg);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .fa-chevron-right {
+      transition: all 0.3s ease;
+    }
+    .link-card:hover .fa-chevron-right {
+      transform: translateX(3px);
+      color: #64748b;
+    }
+
+    /* Ripple */
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(100, 116, 139, 0.2);
+      transform: scale(0);
+      animation: ripple-animation 0.6s linear;
+      pointer-events: none;
+    }
+    @keyframes ripple-animation {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
-<body class="py-12 px-4 md:py-20">
-    <div class="max-w-md mx-auto">
-        <!-- Profile Section -->
-        <div class="text-center mb-12">
-            <div class="w-32 h-32 mx-auto mb-6 overflow-hidden rounded-full shadow-2xl profile-img">
-                <img src="logo.png" alt="Profile" class="w-full h-full object-cover">
-            </div>
-            <h1 class="text-3xl font-bold text-gray-800 mb-2">CEO | Alexandre Melo 👑</h1>
-            <p class="text-gray-600 mb-4 px-4">
+<body class="py-8 px-4 md:py-16">
+  <div class="max-w-md mx-auto">
+
+    <!-- Profile Section -->
+    <div class="text-center mb-10">
+      <div class="profile-img mb-4">
+        <img src="logo.png" alt="Logo LTM" />
+      </div>
+      <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-1">CEO | Alexandre Melo 👑</h1>
+      <p class="text-gray-600 mb-4 px-4">
                 Quer uma página de links como essa, ou personalizada especialmente para você?
             </p>
             <p class="text-sm text-gray-500 italic">
                 Clique no botão de WhatsApp e fale diretamente comigo!
             </p>
-        </div>
+    </div>
 
-        <!-- Links Section -->
-    <div class="space-y-5">
+    <!-- Links Section -->
+    <div class="space-y-4">
+
+      <!-- Rifa Link -->
+<a href="https://www.rifeme.com.br/rifa/ver/rifa-da-vikingx-tuff-25-nova" target="_blank" class="block">
+    <div class="link-card bg-white rounded-xl p-5 shadow-md flex items-center hover:shadow-lg">
+        <div class="icon-container w-12 h-12 rounded-lg bg-yellow-50 flex items-center justify-center mr-4">
+            <i class="fas fa-ticket-alt text-yellow-500 text-2xl"></i>
+        </div>
+        <div class="flex-1">
+            <h3 class="font-semibold text-gray-800">Rifa da VikingX Tuff 25</h3>
+            <p class="text-xs text-gray-500 mt-1">Apenas R$ 18,00 e você poderá ter uma nave dessa!</p>
+        </div>
+        <i class="fas fa-chevron-right text-gray-300 ml-2"></i>
+    </div>
+</a>
+
 
     <!-- WhatsApp Link -->
     <a href="https://wa.me/5511943902900" target="_blank" class="block">
@@ -124,7 +191,7 @@
             </div>
             <div class="flex-1">
                 <h3 class="font-semibold text-gray-800">YouTube</h3>
-                <p class="text-xs text-gray-500 mt-1">Canal sobre Desenvolvimento Pessoal & Finanças</p>
+                <p class="text-xs text-gray-500 mt-1">Canal sobre Desenvolvimento Pessoal &amp; Finanças</p>
             </div>
             <i class="fas fa-chevron-right text-gray-300 ml-2"></i>
         </div>
@@ -134,8 +201,7 @@
     <a href="https://www.instagram.com/ceomelo_/" target="_blank" class="block">
         <div class="link-card bg-white rounded-xl p-5 shadow-md flex items-center hover:shadow-lg">
             <div class="icon-container w-12 h-12 rounded-lg bg-pink-50 flex items-center justify-center mr-4">
-                <i class="fab fa-instagram text-2xl" 
-                   style="background: linear-gradient(45deg,#405DE6,#5851DB,#833AB4,#C13584,#E1306C,#FD1D1D);-webkit-background-clip:text;-webkit-text-fill-color:transparent;"></i>
+                <i class="fab fa-instagram text-2xl" style="background: linear-gradient(45deg,#405DE6,#5851DB,#833AB4,#C13584,#E1306C,#FD1D1D);-webkit-background-clip:text;-webkit-text-fill-color:transparent;"></i>
             </div>
             <div class="flex-1">
                 <h3 class="font-semibold text-gray-800">Instagram</h3>
@@ -174,7 +240,7 @@
     </a>
 
     <!-- Website Link -->
-    <a href="https:droplexstudios.shop" target="_blank" class="block">
+    <a href="https://ceomelo.github.io/MeusLinks/droplexstudios.shop" target="_blank" class="block">
         <div class="link-card bg-white rounded-xl p-5 shadow-md flex items-center hover:shadow-lg">
             <div class="icon-container w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center mr-4">
                 <i class="fas fa-globe text-purple-500 text-2xl"></i>
@@ -188,34 +254,30 @@
     </a>
 </div>
 
-
-        <!-- Footer -->
-        <div class="mt-12 text-center text-gray-500 text-sm">
-            <p>© 2025 | <strong class="text-gray-700">Alexandre Melo  👑</strong> | Todos os direitos reservados.</p>
-        </div>
+    <!-- Footer -->
+    <div class="mt-10 text-center text-gray-500 text-sm">
+      <p>© 2025 | <strong class="text-gray-700">LTM | Padronizações</strong> | Todos os direitos reservados.</p>
     </div>
+  </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add ripple effect to links
-            const links = document.querySelectorAll('.link-card');
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    // Create ripple element
-                    const ripple = document.createElement('span');
-                    ripple.classList.add('ripple');
-                    ripple.style.width = ripple.style.height = Math.max(this.offsetWidth, this.offsetHeight) + 'px';
-                    ripple.style.left = (e.pageX - this.getBoundingClientRect().left - this.offsetWidth / 2) + 'px';
-                    ripple.style.top = (e.pageY - this.getBoundingClientRect().top - this.offsetHeight / 2) + 'px';
-                    this.appendChild(ripple);
-                    
-                    // Remove ripple after animation
-                    setTimeout(() => {
-                        ripple.remove();
-                    }, 600);
-                });
-            });
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll(".link-card");
+      links.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const ripple = document.createElement("span");
+          ripple.classList.add("ripple");
+          ripple.style.width = ripple.style.height =
+            Math.max(this.offsetWidth, this.offsetHeight) + "px";
+          ripple.style.left =
+            e.pageX - this.getBoundingClientRect().left - this.offsetWidth / 2 + "px";
+          ripple.style.top =
+            e.pageY - this.getBoundingClientRect().top - this.offsetHeight / 2 + "px";
+          this.appendChild(ripple);
+          setTimeout(() => ripple.remove(), 600);
         });
-    </script>
+      });
+    });
+  </script>
 </body>
 </html>
